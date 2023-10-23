@@ -1,12 +1,12 @@
 # 프론트엔드 스쿨 플러스: 자바스크립트 프로그래밍
-* GitHub URL: <https://github.com/uzoolove/FESP01-javascript>
+* GitHub URL: https://github.com/uzoolove/FESP01-javascript
 
 ## 개발환경 구축
 ### 프로그램 설치
 * 본인의 OS에 맞는 버전 다운로드 후 설치
-1. Nodejs 설치 <https://nodejs.org/en/download>
-2. Visual Studio Code 설치 <https://code.visualstudio.com/download>
-3. Git 설치 <https://git-scm.com/downloads>
+1. Nodejs 설치: https://nodejs.org/en/download
+2. Visual Studio Code 설치: https://code.visualstudio.com/download
+3. Git 설치: https://git-scm.com/downloads
 
 ### Visual Studio Code 설정
 1. VSCode 실행
@@ -26,15 +26,16 @@
 	* Open 선택
 
 ## 샘플 코드 복사
-* workspace 폴더 생성
-* sample 폴더 내부의 파일과 폴더를 workspace 폴더에 복사
-* 강사의 완성된 코드는 workspace-ins 폴더에서 확인
+* 프로젝트 내에 workspace 폴더 생성
+* sample/day1 폴더 내부의 파일과 폴더를 workspace 폴더에 복사
+* 수업중 작성된 강사의 완성된 코드는 workspace-ins 폴더에서 확인
 
 ## 서버 테스트
 * VS Code 터미널에서 workspace 폴더로 이동 후 실행
 ```
 npx serve .
 ```
+* http://localhost:3000 접속
 
 ## 소스코드 공유
 * 본인의 소스코드를 강사에게 공유하고 싶을때
