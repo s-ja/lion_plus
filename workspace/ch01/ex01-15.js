@@ -1,3 +1,5 @@
+// TODO : hoisting 단원 : 변수 중복 선언이 가능한 이유.
+
 var arr = ["zero", "one", "three", "four"];
 
 var arr2 = arr.splice(2, 0, "two");
