@@ -8,6 +8,6 @@ function printArr(arr){
 var arr = ['zero', 'one', 'two', 'three'];
 
 // delete로 배열요소 삭제
-
+delete arr[1];
 
 printArr(arr);
