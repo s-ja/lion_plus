@@ -1,3 +1,6 @@
+// TODO : hoisting 단원 : 함수 선언보다 먼저 사용이 가능한 이유
+//! add()
+
 // 10 + 100의 결과를 출력한다.
 // function add() {
 //   return 10 + 100;

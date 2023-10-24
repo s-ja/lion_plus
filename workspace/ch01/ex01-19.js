@@ -1,4 +1,4 @@
-// TODO : hoisting 단원
+// TODO : hoisting 단원. var 로 선언한 변수가 함수단위의 접근이 가능한 이유
 
 // 지정한 두 값의 최대값을 반환한다.
 function max(n1, n2) {
