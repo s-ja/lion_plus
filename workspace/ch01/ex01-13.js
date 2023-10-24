@@ -22,9 +22,15 @@ arr.shift();
 arr.name = "asj";
 
 // 대입연산자로 속성 추가. enumerable, writable, configurable true로 설정됨
-arr["age"] = 29;
+// arr["age"] = 29;
 
 // 속성 추가 전용 메소드
+Object.defineProperty(arr, "age", {
+  value: 30,
+  enumerable: true,
+  writable: true,
+  configurable: true,
+});
 
-printArr(arr);
+// printArr(arr);
 printObj(arr);
