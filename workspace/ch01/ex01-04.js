@@ -24,5 +24,4 @@ var obj2 = {
   [Symbol("world")]: 20,
 };
 
-obj2[Symbol("hello")] = 30;
-console.log(obj2);
+obj2[Symbol("hello")] = 30; console.log(obj2);
