@@ -21,10 +21,6 @@ var list = [
   }
 ]
 
-// sort() _id로 내림차순 정렬
-var todolist = [];
-console.log('정렬 결과', todolist);
-
 // forEach() 완료된 할일 목록
 var doneList = [];
 console.log('forEach() 완료된 할일 목록', doneList);
