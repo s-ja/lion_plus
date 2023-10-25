@@ -15,7 +15,7 @@ colorArr.push("white");
 // 유사배열객체
 //  - length 속성 추가
 //  - 0부터 시작해서 1씩 증가하는 속성 추가
-var arr2 = {
+var arr2s = {
   0: "orange",
   1: "yellow",
   2: "green",
@@ -29,29 +29,29 @@ var arr2 = {
   shift: function (elem) {
     // 첫번째 요소를 삭제하고 반환한다.
     // length 를 1 감소시킨다.
-    var first = arr2[0];
-    for (var i = 0; i < arr2.length - 1; i++) {
-      arr2[i] = arr2[i + 1];
+    var first = this[0];
+    for (var i = 0; i < this.length - 1; i++) {
+      this[i] = this[i + 1];
     }
-    arr2.length--;
+    this.length--;
     return first;
   },
   pop: function (elem) {
     // 배열의 마지막 요소 삭제 후 반환
     // length 를 1 감소
-    var last = arr2[arr2.length - 1];
-    arr2.length--;
-    delete arr2[arr2.length - 1];
+    var last = this[this.length - 1];
+    this.length--;
+    delete this[this.length - 1];
     return last;
   },
 };
 
-arr2.push("black");
-arr2.push("white");
+arr2s.push("black");
+arr2s.push("white");
 // console.log(arr2.shift());
-console.log(arr2.pop());
+console.log(arr2s.pop());
 
-printArr(arr2);
+printArr(arr2s);
 // console.log(arr2.length);
 // console.log(arr2.push); //undefined
 // 0 orange

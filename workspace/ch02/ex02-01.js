@@ -6,6 +6,7 @@ var arr = [num, str]; // object(array)
 // 함수를 변수에 할당
 
 var foo = function () {
+  console.log(this);
   return "I am foo.";
 }; // 함수를 변수에 할당
 
@@ -14,7 +15,7 @@ var foo = function () {
 arr.push(obj);
 arr.push(foo);
 
-console.log(arr);
+// console.log(arr);
 
 // 함수를 객체의 속성으로 할당(메소드)
 
@@ -24,6 +25,6 @@ obj.baz = function () {
   return "I am baz.";
 };
 
-console.log(obj);
+// console.log(obj);
 
 console.log(foo(), obj.bar(), arr[3](), arr[2].bar());
