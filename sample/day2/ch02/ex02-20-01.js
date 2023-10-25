@@ -17,7 +17,7 @@ var todolist = [
   {
     "_id": 4,
     "title": "React 프로젝트",
-    "done": false
+    "done": true
   }
 ]
 
