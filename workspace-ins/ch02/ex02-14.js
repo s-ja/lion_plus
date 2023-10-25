@@ -20,3 +20,7 @@ var lee = {
 
 console.log(kim.age, kim.getName());
 console.log(lee.age, lee.getName());
+
+console.log(kim.getName(), kim.getName.call(window));
+console.log(lee.getName(), lee.getName.apply(kim));
+console.log(returnName(), returnName.call(lee));
