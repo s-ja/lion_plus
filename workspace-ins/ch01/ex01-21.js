@@ -1,9 +1,30 @@
 // 구조 분해 할당
 var colors = ['yellow', 'green', 'blue'];
+var [one, two, three, four] = colors;
+console.log(colors[0], colors[1], colors[2]);
+console.log(one, two, three, four);
+
+// React
+// const countState = useState(0);
+// console.log(countState[0]);
+// countState[1](countState[0]+1);
+
+// // React 구조 분해 할당
+// const [count, setCount] = useState(0);
+// console.log(count);
+// setCount(count+1);
 
 var kim = { userName: '김철수', userAge: 35 };
+console.log(kim.userName, kim.userAge);
+var {userAge: age, userName} = kim;
+console.log(userName, age);
 
 // 선언된 변수에 적용
+var first, second;
+[first, second] = [100, 200, 300];
+console.log(first, second);
+({first, second} = {first: 'orange', second: 'green', third: 'yellow'});
+console.log(first, second);
 
 // 기본값 할당(undefined 대체)
 
