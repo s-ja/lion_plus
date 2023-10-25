@@ -26,7 +26,8 @@ todolist.sort();
 console.log('정렬 결과', todolist);
 
 // forEach() 완료된 할일 목록
-var doneList = todolist.forEach(function(){});
+var doneList = [];
+todolist.forEach(function(){});
 console.log('forEach() 완료된 할일 목록', doneList);
 
 // filter() 완료된 할일 목록
