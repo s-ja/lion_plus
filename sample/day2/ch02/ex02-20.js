@@ -1,4 +1,4 @@
-var todolist = [
+var list = [
   {
     "_id": 1,
     "title": "Javascript 공부",
@@ -22,7 +22,7 @@ var todolist = [
 ]
 
 // sort() _id로 내림차순 정렬
-
+var todolist = [];
 console.log('정렬 결과', todolist);
 
 // forEach() 완료된 할일 목록
@@ -30,7 +30,7 @@ var doneList = [];
 console.log('forEach() 완료된 할일 목록', doneList);
 
 // filter() 완료된 할일 목록
-const doneList = [];
+var doneList = [];
 console.log('filter() 완료된 할일 목록', doneList);
 
 // map() 남은 할일 목록

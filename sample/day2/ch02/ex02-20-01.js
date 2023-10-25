@@ -30,7 +30,7 @@ var doneList = todolist.forEach();
 console.log('forEach() 완료된 할일 목록', doneList);
 
 // filter() 완료된 할일 목록
-const doneList = todolist.filter();
+var doneList = todolist.filter();
 console.log('filter() 완료된 할일 목록', doneList);
 
 // map() 남은 할일 목록
