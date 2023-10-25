@@ -26,15 +26,19 @@ console.log(returnName());
 // 객체를 생성해서 반환하는 함수 (생성자)
 
 function Person(name, age) {
-  var obj = {};
+  //   var obj = {};
 
-  obj.name = name;
-  obj.age = age;
-  obj.getName = function () {
+  if (!(this instanceof Person)) {
+    return new Person(name, age);
+  }
+
+  this.name = name;
+  this.age = age;
+  this.getName = function () {
     return this.name;
   };
 
-  return obj;
+  //   return obj;
 }
 
 var kim = new Person("kim", 30);
