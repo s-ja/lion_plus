@@ -7,13 +7,28 @@ console.log(sum(10, 20));
 
 console.log(sum(30));
 
-// 구조 분해 할당과 같이 사용
+// TODO : IIFE pattern - 즉시 실행 함수
 
-function sum2([x = 0, y = 0] = []) {
-  return x + y;
-}
+(function () {
+  // 구조 분해 할당과 같이 사용
 
-console.log(sum2([1, 2]));
-console.log(sum2());
-console.log(sum2([]));
-console.log(sum2([1]));
+  function sum([x = 0, y = 0] = []) {
+    return x + y;
+  }
+
+  console.log(sum([1, 2]));
+  console.log(sum());
+  console.log(sum([]));
+  console.log(sum([1]));
+})();
+
+(function () {
+  function sum({ x = 0, y = 0 } = {}) {
+    return x + y;
+  }
+
+  console.log(sum());
+  console.log(sum({}));
+  console.log(sum({ x: 4 }));
+  console.log(sum({ x: 4, y: 6 }));
+})();
