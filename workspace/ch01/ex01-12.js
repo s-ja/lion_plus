@@ -23,26 +23,41 @@ var arr2s = {
   push: function (elem) {
     // 마지막 인덱스에 지정한 elem를 추가
     // length를 1 추가한다.
-    this[this.length] = elem;
-    this.length++;
+
+    // this[this.length] = elem;
+    // this.length++;
+
+    // var tmpArr = [];
+    // tmpArr.push.call(this, elem);
+
+    // TODO : prototype 단원. 배열의 모든 메소드는 Array.prototype 속성에 정의되어 있음.
+    Array.prototype.push.call(this, elem);
   },
+
   shift: function (elem) {
     // 첫번째 요소를 삭제하고 반환한다.
     // length 를 1 감소시킨다.
-    var first = this[0];
-    for (var i = 0; i < this.length - 1; i++) {
-      this[i] = this[i + 1];
-    }
-    this.length--;
-    return first;
+
+    // var first = this[0];
+    // for (var i = 0; i < this.length - 1; i++) {
+    //   this[i] = this[i + 1];
+    // }
+    // this.length--;
+    // return first;
+
+    return Array.prototype.shift.call(this);
   },
+
   pop: function (elem) {
     // 배열의 마지막 요소 삭제 후 반환
     // length 를 1 감소
-    var last = this[this.length - 1];
-    this.length--;
-    delete this[this.length - 1];
-    return last;
+
+    // var last = this[this.length - 1];
+    // this.length--;
+    // delete this[this.length - 1];
+    // return last;
+
+    return Array.prototype.pop.call(this);
   },
 };
 
