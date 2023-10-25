@@ -1,4 +1,4 @@
-var list = [
+var todolist = [
   {
     "_id": 1,
     "title": "Javascript 공부",
