@@ -29,6 +29,25 @@ function userInfo(strings, userName, age, phone, address) {
   console.log(age);
   console.log(phone);
   console.log(address);
+
+  if (age >= 19 && age <= 34) {
+    age = "청년";
+  }
+  address = address.split(" ")[0];
+
+  let first = phone.slice(0, phone.length - 4);
+  phone = first.padEnd(phone.length, "*");
+
+  return (
+    strings[0] +
+    userName +
+    strings[1] +
+    age +
+    strings[2] +
+    phone +
+    strings[3] +
+    address
+  );
 }
 
 var kim = userInfo`
@@ -37,3 +56,5 @@ ${user.userName}님의 정보입니다.
 전화번호: ${user.phone}
 주소: ${user.address}
 `;
+
+console.log(kim);
