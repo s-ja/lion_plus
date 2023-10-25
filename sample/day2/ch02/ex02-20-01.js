@@ -43,11 +43,11 @@ console.log('reduce() 남은 할일 수', reaminCount);
 
 // find() _id=2인 할일
 var todo = todolist.find();
-console.log('find() id=2인 할일', todo);
+console.log('find() _id=2인 할일', todo);
 
 // find() _id=3인 할일의 index
 var todoIndex = todolist.find();
-console.log('find() id=3인 할일의 index', todoIndex);
+console.log('find() _id=3인 할일의 index', todoIndex);
 
 // some() 남은 할일이 하나라도 있는가?
 var hasTodo = todolist.some();
