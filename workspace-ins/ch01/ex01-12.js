@@ -23,26 +23,26 @@ var arr2 = {
   push: function(elem){
     // 맨뒤에 지정한 elem를 추가한다.
     // length를 1 증가시킨다.
-    arr2[arr2.length] = elem;
-    arr2.length++;
+    this[this.length] = elem;
+    this.length++;
   },
   shift: function(){
     // 첫번째 요소를 삭제하고 반환한다.
     // length를 1 감소시킨다.
-    var first = arr2[0];
-    for(var i=0; i<arr2.length-1; i++){
-      arr2[i] = arr2[i+1];
+    var first = this[0];
+    for(var i=0; i<this.length-1; i++){
+      this[i] = this[i+1];
     }
-    arr2.length--;
-    delete arr2[arr2.length];
+    this.length--;
+    delete this[this.length];
     return first;
   },
   pop: function(){
     // 마지막 요소를 삭제후 반환
     // length 1 감소
-    var last = arr2[arr2.length-1];
-    arr2.length--;
-    delete arr2[arr2.length];
+    var last = this[this.length-1];
+    this.length--;
+    delete this[this.length];
     return last;
   }
 };
