@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log("load 이벤트 발생");
+        var btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+          var msg = "버튼이 누르고 3추가 지났습니다.";
+          setTimeout(() => {
+            console.log("버튼이 눌리고 3추가 지났습니다.");
+          }, 1000 * 3);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>익명 함수 사용 예제</h1>
+    <input type="text" />
+    <button>전송</button>
+  </body>
+</html>

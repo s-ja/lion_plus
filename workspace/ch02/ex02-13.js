@@ -18,4 +18,4 @@ fn(40, 50, 60);
 fn(40, 50, 60, 70, 80, 90, 100, 110, 120);
 
 // console.log(fn.arguments); // null
-console.log(fn.this); // undefined
+// console.log(fn.this); // undefined
