@@ -27,33 +27,62 @@ var todolist = [
 
 // forEach() 완료된 할일 목록
 var doneList = [];
-todolist.forEach(function () {});
+todolist.forEach(function (todo) {
+  if (todo.done) {
+    doneList.push(todo);
+  }
+});
 console.log("forEach() 완료된 할일 목록", doneList);
 
 // filter() 완료된 할일 목록
-var doneList = todolist.filter(function () {});
+var doneList = todolist.filter(function (todo) {
+  return todo.done;
+});
 console.log("filter() 완료된 할일 목록", doneList);
 
 // map() 남은 할일 목록
-var reaminList = todolist.map(function () {});
+var reaminList = todolist
+  .map(function (todo) {
+    if (!todo.done) {
+      return todo;
+    }
+  })
+  .filter(Boolean);
+
 console.log("map() 남은 할일 목록", reaminList);
 
 // reduce() 남은 할일 수
-var reaminCount = todolist.reduce(function () {});
+var reaminCount = todolist.reduce(function (acc, todo) {
+  if (!todo.done) {
+    acc += 1;
+  }
+  return acc;
+}, 0);
 console.log("reduce() 남은 할일 수", reaminCount);
 
 // find() _id=2인 할일
-var todo = todolist.find(function () {});
+var todo = todolist.find(function (todo) {
+  return todo._id === 2;
+});
 console.log("find() _id=2인 할일", todo);
 
 // find() _id=3인 할일의 index
-var todoIndex = todolist.find(function () {});
+var todoIndex = todolist.findIndex(function (todo) {
+  return todo._id === 3;
+});
 console.log("find() _id=3인 할일의 index", todoIndex);
 
 // some() 남은 할일이 하나라도 있는가?
-var hasTodo = todolist.some(function () {});
+var hasTodo = todolist.some(function (todo) {
+  return !todo.done;
+});
 console.log("some() 남은 할일이 하나라도 있는가?", hasTodo);
 
 // every() 할일이 모두 완료 되었는가?
-var busy = todolist.every(function () {});
+var busy = todolist.every(function (todo) {
+  return todo.done;
+});
 console.log("every() 할일이 모두 완료 되었는가?", busy);
+
+// sort() _id로 내림차순 정렬
+// todolist.sort((a, b) => b._id - a._id);
