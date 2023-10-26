@@ -8,7 +8,7 @@ HighSchool.prototype.sum = function(){
   return this.kor + this.eng;
 };
 HighSchool.prototype.avg = function(){
-  return this.sum() / 2;
+  return Math.round(this.sum() / 2);
 };
 
 var s1 = new HighSchool(100, 91);
@@ -26,9 +26,11 @@ function College(kor, eng){
 inherite(HighSchool, College);
 
 function inherite(Parent, Child){
-  let F = function(){};
-  F.prototype = Parent.prototype;
-  Child.prototype = new F();
+  // let F = function(){};
+  // F.prototype = Parent.prototype;
+  // Child.prototype = new F();
+
+  Child.prototype = Object.create(Parent.prototype);
   Child.prototype.constructor = Child;
 }
 
