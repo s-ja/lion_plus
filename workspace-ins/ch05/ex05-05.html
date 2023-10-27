@@ -17,16 +17,29 @@
   // url: /time
   // querystring: msg=time
   // 서버의 응답 포맷: Text
-	function getTime(){
-		
+	async function getTime(){
+		try{
+      const response = await axios('http://localhost:33080/time?msg=time');
+      const data = response.data;
+      append(data);
+    }catch(err){
+      console.error(err);
+    }
 	};
 
   // method: POST
   // url: /timejson
   // body: {msg: 'timejson'}
   // 서버의 응답 포맷: JSON
-	function getTimeJson(){
-    
+	async function getTimeJson(){
+    try{
+      const body = {msg: 'timejson'};
+      const response = await axios.post('http://localhost:33080/timejson', body);
+      const data = response.data;
+      appendJson(data);
+    }catch(err){
+      console.error(err);
+    }
   }
   
 	function append(str){
