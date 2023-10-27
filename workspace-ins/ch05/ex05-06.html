@@ -22,7 +22,6 @@
       return Promise.reject(err);
     });
 
-    
     // 응답 인터셉터 추가
     axios.interceptors.response.use(function(response){
       console.log('정상 응답', response);
@@ -44,7 +43,7 @@
   // 서버의 응답 포맷: Text
 	async function getTime(){
 		try{
-      const response = await axios('/time?msg=time&delay=3000');
+      const response = await axios('/time?msg=time');
       const data = response.data;
       append(data);
     }catch(err){
