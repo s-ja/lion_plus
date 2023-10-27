@@ -39,6 +39,15 @@ npx serve .
 * http://localhost:3000 접속
   - 이미 3000 포트가 사용중일 경우 콘솔 안내 메세지에 따라서 접속
 
+* nodejs 서버 구동(5강 AJAX 테스트)
+```
+# 프로젝트 폴더에서 실행
+cd workspace/nodejs
+npm i
+npm start
+```
+* http://localhost:33080 접속
+
 ## 소스코드 공유
 * 본인의 소스코드를 강사에게 공유하고 싶을때
 * StackBlitz: https://stackblitz.com 접속 후 문제 있는 소스코드 붙여넣기
