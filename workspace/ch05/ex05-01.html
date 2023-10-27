@@ -15,14 +15,40 @@
         // console.log(btn1);
 
         btn1.addEventListener("click", (event) => {
-          console.log("btn-1 클릭", event.clientX, event.clientY);
+          // 두번째 영화 찾기
+          var movies = document.querySelector("#movies");
+          var firstLi = movies.firstElementChild;
+          if (firstLi) {
+            var secondLi = firstLi.nextElementSibling;
+            if (secondLi) {
+              var title = secondLi.firstChild.nodeValue;
+              console.log(title);
+            }
+          }
         });
-        btn2.addEventListener("click", function () {
-          console.log("btn-2 클릭", this);
+        btn2.addEventListener("click", () => {
+          // 마지막에 우유 추가
+          var purchases = document.querySelector("#purchases");
+          var newLi = document.createElement("li");
+          var newTxt = document.createTextNode("우유");
+          newLi.appendChild(newTxt);
+          purchases.appendChild(newLi);
         });
+
         btn3.addEventListener("click", () => {
-          console.log("btn-3 클릭");
+          // 첫번째 삭제
+          var list = document.querySelectorAll(".list");
+          for (let i = 0; i < list.length; i++) {
+            var firstLi = list[i].firstElementChild;
+            firstLi.remove();
+          }
         });
+
+        function removeNode(elem) {
+          if (elem) {
+            elem.remove();
+          }
+        }
       });
     </script>
   </head>
