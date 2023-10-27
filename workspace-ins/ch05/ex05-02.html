@@ -17,7 +17,13 @@
   // querystring: msg=time
   // 서버의 응답 포맷: Text
 	function getTime(){
-		
+		var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:33080/time?msg=time', true);
+    xhr.onload = function(){
+      var result = xhr.responseText;
+      append(result);
+    };
+    xhr.send();
 	};
 
   // method: POST
