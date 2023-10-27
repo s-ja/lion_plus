@@ -17,7 +17,13 @@
       // querystring: msg=time
       // 서버의 응답 포맷: Text
       function getTime() {
-        // http://localhost:33080/time?msg=hello
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://localhost:33080/time?msg=time", true);
+        xhr.onload = function () {
+          var result = xhr.responseText;
+          append(result);
+        };
+        xhr.send();
       }
 
       // method: POST
@@ -25,7 +31,17 @@
       // body: {msg: 'timejson'}
       // 서버의 응답 포맷: JSON
       function getTimeJson() {
-        // http://localhost:33080/timejson?msg=hello&delay=5000
+        const body = { msg: "timejson" };
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:33080/timejson", true);
+        xhr.onload = function () {
+          var result = xhr.responseText;
+          var obj = JSON.parse(result); 
+          appendJson(obj);
+        };
+        const strbody = JSON.stringify(body);
+        console.log(strbody);
+        xhr.send(strbody);
       }
 
       function append(str) {
