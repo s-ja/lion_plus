@@ -69,10 +69,23 @@ function promiseFn2(f1Result){
   });
 }
 
+// Promise ES6 2015
+// (function(){
+//   promiseFn1()
+//     .then(promiseFn2)
+//     .then(()=>console.log('작업 종료.'))
+//     .catch(err=>console.error(err));
+//   console.log('이벤트 처리 완료.');
+// })();
+
+// async/await ES2017
+async function working(){
+  var f1Result = await promiseFn1();
+  var f2Result = await promiseFn2(f1Result);
+  console.log('작업 처리 완료.', f2Result);
+}
 (function(){
-  promiseFn1()
-    .then(promiseFn2)
-    .then(()=>console.log('작업 종료.'))
-    .catch(err=>console.error(err));
+  working();
   console.log('이벤트 처리 완료.');
 })();
+
