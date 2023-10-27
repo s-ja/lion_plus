@@ -25,12 +25,21 @@
 
     btn2.addEventListener('click', function() {
       // 마지막에 우유 추가
-
+      var newLi = document.createElement('li');
+      var newTxt = document.createTextNode('우유');
+      newLi.appendChild(newTxt);
+      var purchases = document.querySelector('#purchases');
+      purchases.appendChild(newLi);
     });
 
     btn3.addEventListener('click', () => {
       // 첫번째 삭제
-
+      var list = document.querySelector('.list');
+      for(let i=0; i<list.length; i++){
+        var firstLi = list[i].firstElementChild;
+        if(firstLi);
+        firstLi.remove();
+      }
     });
   });
 </script>
