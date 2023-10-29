@@ -1,4 +1,4 @@
-# 멋쟁이 사자처럼 Front-End School Plus 1기: Javascript 프로그래밍
+# 멋쟁이 사자처럼 Front-End School Plus 1기: JavaScript 프로그래밍
 * GitHub URL: https://github.com/uzoolove/FESP01-javascript
 
 ## 개발환경 구축
